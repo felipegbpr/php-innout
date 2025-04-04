@@ -38,18 +38,6 @@
               <span class="mb-2">Sair</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="logout.php">
-              <i class="icofont-logout mr-2 mb-2"></i>
-              <span class="mb-2">Sair</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="logout.php">
-              <i class="icofont-logout mr-2 mb-2"></i>
-              <span class="mb-2">Sair</span>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
