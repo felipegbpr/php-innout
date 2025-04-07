@@ -5,8 +5,8 @@
             'Mantenha seu ponto consistente!',
             'icofont-check-alt'     
         );
-        // TO-DO
-        // include(TEMPLATE_PATH . "/messages.php"); 
+       
+        include(TEMPLATE_PATH . "/messages.php"); 
     ?>
     <div class="card">
         <div class="card-header">
