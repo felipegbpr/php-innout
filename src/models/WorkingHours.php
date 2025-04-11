@@ -60,6 +60,16 @@ class WorkingHours extends Model {
     }
   }
 
+  function getBalance() {
+    if (!$this->time1 && !isPastWorkday($this->work_date)) return '';
+    if ($this->worked_time == DAILY_TIME) return '-';
+
+    $balance = $this->worked_time - DAILY_TIME;
+    $balanceString = getTimeStringFromSeconds(abs($balance));
+    $sign = $this->worked_time >= DAILY_TIME ? '+' : '-';
+    return "{$sign}{$balanceString}";
+  }
+
   function getWorkedInterval() {
     [$t1, $t2, $t3, $t4] = $this->getTimes();
 
