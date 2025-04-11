@@ -7,6 +7,16 @@
   );
   ?>
   <div>
+    <form action="#" class="mb-4" method="post">
+      <select name="period" class="form-control text-capitalize" placeholder="Selecione o período...">
+        <?php 
+          foreach ($periods as $key => $month) {
+            echo "<option value='{$key}' class='text-capitalize'>{$month}</option>";
+          }
+        ?> 
+      </select>
+    </form>
+
     <table class="table table-bordered table-striped table-hover">
       <thead>
         <th>Dia</th>
