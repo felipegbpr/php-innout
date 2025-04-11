@@ -19,12 +19,12 @@ for ($yearDiff = 2; $yearDiff >= 0; $yearDiff--) {
 $report = [];
 $workDay = 0;
 $sumOfWorkedTime = 0;
-$lastDay = getLastDayOfMonth($currentDate)->format('d');
+$lastDay = getLastDayOfMonth($selectedPeriod)->format('d');
 
 $registries = WorkingHours::getMonthlyReport($user->id, $currentDate);
 
 for ($day = 1; $day <= $lastDay; $day++) {
-  $date = $currentDate->format('Y-m') . '-' . sprintf('%02d', $day);
+  $date = $selectedPeriod . '-' . sprintf('%02d', $day);
   $registry = $registries[$date];
   
   if (isPastWorkday($date)) $workDay++;
