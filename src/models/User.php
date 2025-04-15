@@ -21,6 +21,8 @@ class User extends Model {
 
 			if(!$this->end_date) $this->end_date = null;
 
+			$this->password = password_hash($this->password, PASSWORD_DEFAULT);
+
 			return parent::insert();
 		}
 }
