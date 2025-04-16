@@ -34,7 +34,7 @@
 							<i class="icofont-edit"></i>
 						</a>
 						<a 
-							href="?delete=<?= $user->id ?>" 
+							href="delete_user.php?delete=<?= $user->id ?>" 
 							class="btn btn-danger rounded-circle"
 						>
 							<i class="icofont-trash"></i>

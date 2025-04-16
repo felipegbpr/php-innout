@@ -25,6 +25,10 @@ class Model {
         $this->values[$key] = $value;
     }
 
+		public function getValues() {
+			return $this->values;
+		}
+
     public static function getOne($filters = [], $columns = '*') {
         $class = get_called_class();
         $result = static::getResultSetFromSelect($filters, $columns);
@@ -81,6 +85,15 @@ class Model {
             $filters, 'count(*) as count');
         return $result->fetch_assoc()['count'];     
     }
+
+		public function delete() {
+			static::deleteById($this->id);
+		}
+
+		public static function deleteById($id) {
+			$sql = "DELETE FROM " . static::$tableName . " WHERE id = {$id}";
+			Database::executeSQL($sql);		
+		}
 
     private static function getFilters($filters) {
         $sql = '';
