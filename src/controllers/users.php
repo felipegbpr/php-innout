@@ -1,6 +1,6 @@
 <?php
 session_start();
-requireValidSession();
+requireValidSession(true);
 
 $users = User::get();
 foreach ($users as $user) {
